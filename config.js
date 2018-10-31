@@ -1,35 +1,10 @@
-// Everything is explained here:
-// @link https://gekko.wizb.it/docs/commandline/plugins.html
-
-var config = {};
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//                          GENERAL SETTINGS
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+var config = {}
 config.debug = true; // for additional logging / debugging
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//                         WATCHING A MARKET
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 config.watch = {
-
-  // see https://gekko.wizb.it/docs/introduction/supported_exchanges.html
   exchange: 'binance',
   currency: 'USDT',
   asset: 'BTC',
-
-  // You can set your own tickrate (refresh rate).
-  // If you don't set it, the defaults are 2 sec for
-  // okcoin and 20 sec for all other exchanges.
-  // tickrate: 20
 }
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//                       CONFIGURING TRADING ADVICE
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 config.tradingAdvisor = {
   enabled: true,
   method: 'MACD',
@@ -52,10 +27,7 @@ config.MACD = {
     // before we consider it real?
     persistence: 1
   }
-};
-
-// settings for other strategies can be found at the bottom, note that only
-// one strategy is active per gekko, the other settings are ignored.
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //                       CONFIGURING PLUGINS
